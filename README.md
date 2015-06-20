@@ -36,6 +36,6 @@
 > 
 > 
 > ### Step 5.
-> - The average of each variable for each activity and each subject.'aggregate' function ({stats} package). 
+> - The average of each variable for each activity and each subject was calculated using 'aggregate' function ({stats} package).
 > - Save the result in a single text file.
 
