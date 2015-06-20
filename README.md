@@ -1,7 +1,7 @@
 ## Included files in this repo
-### 1. Codebook.md
-### 2. README.md
-### 3. run_analysis.R
+#### 1. Codebook.md
+#### 2. README.md
+#### 3. run_analysis.R
 
 ## Parent data sets are originally from the following link:
 ## http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
