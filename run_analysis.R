@@ -49,19 +49,19 @@ df.merged.mean.std <- bind_cols(df.merged.mean, df.merged.std)
 ### Step 3. ###
 # Coverting activity codes to desctriptive activity type names using combination of 'for loop' and 'if statement'.
 for (i in 1:length(df.merged.mean.std[,1])) {
-  if(df.merged.mean.std[i,]$activity_type == 1) {
-    df.merged.mean.std[i,]$activity_type = "WALKING"
-  } else if(df.merged.mean.std[i,]$activity_type == 2) {
-    df.merged.mean.std[i,]$activity_type = "WALKING_UPSTAIRS"
-  } else if(df.merged.mean.std[i,]$activity_type == 3) {
-    df.merged.mean.std[i,]$activity_type = "WALKING_DOWNSTAIRS"
-  } else if(df.merged.mean.std[i,]$activity_type == 4) {
-    df.merged.mean.std[i,]$activity_type = "SITTING"
-  } else if(df.merged.mean.std[i,]$activity_type == 5) {
-    df.merged.mean.std[i,]$activity_type = "STANDING"
+  if(df.merged.mean.std[i,]$activity_type==1) {
+    df.merged.mean.std[i,]$activity_type="WALKING"
+  } else if(df.merged.mean.std[i,]$activity_type==2) {
+    df.merged.mean.std[i,]$activity_type="WALKING_UPSTAIRS"
+  } else if(df.merged.mean.std[i,]$activity_type==3) {
+    df.merged.mean.std[i,]$activity_type="WALKING_DOWNSTAIRS"
+  } else if(df.merged.mean.std[i,]$activity_type==4) {
+    df.merged.mean.std[i,]$activity_type="SITTING"
+  } else if(df.merged.mean.std[i,]$activity_type==5) {
+    df.merged.mean.std[i,]$activity_type="STANDING"
   }
   else {
-    df.merged.mean.std[i,]$activity_type = "LAYING"
+    df.merged.mean.std[i,]$activity_type="LAYING"
   }
 }      
 
