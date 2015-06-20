@@ -28,7 +28,7 @@
 > 
 > 
 > ### Step 3.
-> - Covert the activity codes to desctriptive activity type names using combination of 'for loop' and 'if statement'.
+> - Convert the activity codes to desctriptive activity type names using combination of 'for loop' and 'if statement'.
 > 
 > 
 > ### Step 4. 
