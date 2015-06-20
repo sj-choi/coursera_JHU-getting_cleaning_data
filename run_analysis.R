@@ -6,11 +6,11 @@
 
 ### Step 1. ###
 # Read features.txt file, which contains the variable names in the data set to be read.
-setwd("/Users/chois5/Desktop/coursera/get_clean/prj/UCI_HAR_Dataset")
+setwd("/Users/user_name/Desktop/coursera/get_clean/prj/UCI_HAR_Dataset")
 features <- read.table("features.txt", sep="", col.names=c("number", "features"))
 
 # Set the working directory for train data set.
-setwd("/Users/chois5/Desktop/coursera/get_clean/prj/UCI_HAR_Dataset/train")
+setwd("/Users/user_name/Desktop/coursera/get_clean/prj/UCI_HAR_Dataset/train")
 # Read-in 'subject ids' from the 'subject_train.txt'.
 subject_train <- read.table("subject_train.txt", col.names=c("subject"))
 # Contents of the Second column in the feature.txt were used as variable names. 
@@ -21,7 +21,7 @@ y_train <- read.table("y_train.txt", sep="", col.names=c("activity_type"))
 df.train <- data.frame(subject_train, y_train, X_train)
 
 # Set the working directory for test data set.
-setwd("/Users/chois5/Desktop/coursera/get_clean/prj/UCI_HAR_Dataset/test") 
+setwd("/Users/user_name/Desktop/coursera/get_clean/prj/UCI_HAR_Dataset/test") 
 # Read-in 'subject ids' from the 'subject_test.txt'.
 subject_test <- read.table("subject_test.txt", col.names=c("subject"))
 # Contents of the Second column in the feature.txt were used as variable names.
@@ -72,7 +72,7 @@ for (i in 1:length(df.merged.mean.std[,1])) {
 # 'aggregate' function was used to get the average of each variable for each activity and each subject.
 tidy.2nd <- aggregate(df.merged.mean.std[, 3:ncol(df.merged.mean.std)], by=list(subject=df.merged.mean.std$subject, activity_type=df.merged.mean.std$activity_type ), FUN = mean)
 # Save the result in a text file in the following directory.
-setwd("/Users/chois5/Desktop/coursera/get_clean/prj")
+setwd("/Users/user_name/Desktop/coursera/get_clean/prj")
 write.table(tidy.2nd, file="tidy2nd.txt", sep=" ", row.name=FALSE)
 
 
