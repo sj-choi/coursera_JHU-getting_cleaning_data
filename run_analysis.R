@@ -13,7 +13,8 @@ features <- read.table("features.txt", sep="", col.names=c("number", "features")
 setwd("/Users/user_name/Desktop/coursera/get_clean/prj/UCI_HAR_Dataset/train")
 # Read-in 'subject ids' from the 'subject_train.txt'.
 subject_train <- read.table("subject_train.txt", col.names=c("subject"))
-# Contents of the Second column in the feature.txt were used as variable names. 
+# Read-in 'X-train.txt'.
+# Contents of the Second column in the feature.txt were used as variable names, which are descriptive. 
 X_train <- read.table("X_train.txt", sep="", col.names=t(features)[2,])
 # Read-in 'activity types' from the 'y_train.txt'.
 y_train <- read.table("y_train.txt", sep="", col.names=c("activity_type"))
@@ -24,7 +25,8 @@ df.train <- data.frame(subject_train, y_train, X_train)
 setwd("/Users/user_name/Desktop/coursera/get_clean/prj/UCI_HAR_Dataset/test") 
 # Read-in 'subject ids' from the 'subject_test.txt'.
 subject_test <- read.table("subject_test.txt", col.names=c("subject"))
-# Contents of the Second column in the feature.txt were used as variable names.
+# Read-in 'X-test.txt'.
+# Contents of the Second column in the feature.txt were used as variable names, which are descriptive.
 X_test <- read.table("X_test.txt", sep="", col.names=t(features)[2,])
 # Read-in 'activity types' from the 'y_test.txt'.
 y_test <- read.table("y_test.txt", sep="", col.names=c("activity_type"))
