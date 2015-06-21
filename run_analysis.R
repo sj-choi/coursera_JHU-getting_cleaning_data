@@ -74,7 +74,10 @@ for (i in 1:length(df.merged.mean.std[,1])) {
 
 ### Step 5. ###
 # 'aggregate' function was used to get the average of each variable for each activity and each subject.
-tidy.2nd <- aggregate(df.merged.mean.std[, 3:ncol(df.merged.mean.std)], by=list(subject=df.merged.mean.std$subject, activity_type=df.merged.mean.std$activity_type ), FUN = mean)
+tidy.2nd <- aggregate(df.merged.mean.std[, 3:ncol(df.merged.mean.std)], 
+                      by=list(subject=df.merged.mean.std$subject, 
+                      activity_type=df.merged.mean.std$activity_type ), 
+                      FUN = mean)
 # Save the result in a text file in the following directory.
 setwd("/Users/user_name/Desktop/coursera/get_clean/prj")
 write.table(tidy.2nd, file="tidy2nd.txt", sep=" ", row.name=FALSE)
